@@ -21,7 +21,7 @@ var loopback = require('loopback')
 
 // Set up the HTTP listener ip & port
 var ip = process.env.IP || '0.0.0.0'
-var port = process.env.PORT || 3000;
+var port = proces.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 3000;
 var baseURL = 'http://' + ip + ':' + port;
 app.set('ip', ip);
 app.set('port', port);
